@@ -50,7 +50,7 @@
 erDiagram
     USERS ||--o{ POINT_HISTORY : "포인트 변동"
     USERS ||--o{ ORDERS : "주문"
-    MENU ||--o{ ORDERS : "주문됨"
+    MENUS ||--o{ ORDERS : "주문됨"
     ORDERS ||--|| OUTBOX_EVENT : "전송 이벤트"
 
     USERS {
@@ -69,7 +69,7 @@ erDiagram
         DATETIME created_at
     }
 
-    MENU {
+    MENUS {
         BIGINT id PK
         VARCHAR name
         INT price
