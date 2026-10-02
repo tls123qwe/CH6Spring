@@ -9,7 +9,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "orders")
+@Table(name = "orders",
+        indexes = @Index(name = "idx_orderscreated_menu", columnList = "created_at, menu_id"))
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 
